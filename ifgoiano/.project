@@ -28,4 +28,21 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>src/main/webapp/imagens/imagen.png</name>
+			<type>1</type>
+			<location>C:/Users/2022108102540028/Downloads/Insumos/imagens/imagen.png</location>
+		</link>
+		<link>
+			<name>src/main/webapp/musicas/musica.mp3</name>
+			<type>1</type>
+			<location>C:/Users/2022108102540028/Downloads/Insumos/musicas/musica.mp3</location>
+		</link>
+		<link>
+			<name>src/main/webapp/videos/video.mp4</name>
+			<type>1</type>
+			<location>C:/Users/2022108102540028/Downloads/Insumos/videos/video.mp4</location>
+		</link>
+	</linkedResources>
 </projectDescription>
