@@ -18,7 +18,9 @@ public class AgoraServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	
+	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		//Processamento de Backend
+		
 		// Pegando a data atual
 		LocalDateTime date = LocalDateTime.now();
 		
@@ -28,13 +30,16 @@ public class AgoraServlet extends HttpServlet {
 		// Passando a data atual para o transformador e guardando a string dentro de data
 		String data = formato.format(date);
 		
-		//Concatenando a data com o html
-		String html = "<html><body><h1>"+ data +"</html></body></h1>";
+		//Armazenando valores para a JSP
+		req.setAttribute("dataHora", data);
 		
-		//Aqui, a gente passa o tipo de entrada que o request vai ter
-		resp.setContentType("text/html;charset=UTF-8");
-		//Aqui não sei
-		resp.getWriter().print(html);
+		
+		//Retornar para a página agora ServLet
+		req.getRequestDispatcher("dataHoraCerta.jsp")
+		.forward(req, resp); // Vai para essa página e envia tambem a requisicao e a resposta
+		
+		
+		
 		
 	}
 	
